@@ -1,0 +1,8 @@
+{
+  "domain": "Qiyeweichat",
+  "name": "weixin_quanjia",
+  "documentation": "https://www.home-assistant.io/components/vlc",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}

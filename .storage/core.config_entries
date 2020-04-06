@@ -1,0 +1,175 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "track_home": true
+                },
+                "domain": "met",
+                "entry_id": "d3472345c0ca4e978f7638e54c7fa76b",
+                "options": {},
+                "source": "onboarding",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "broker": "core-mosquitto",
+                    "discovery": true,
+                    "password": "to3aikae5iu5aesh5oo2thaew2Eecooge8aeda3aipi8reewie2zaqu0ieC7caed",
+                    "port": 1883,
+                    "protocol": "3.1.1",
+                    "username": "homeassistant"
+                },
+                "domain": "mqtt",
+                "entry_id": "07cb67edef754eb296a3c2d77b1fe2ff",
+                "options": {},
+                "source": "hassio",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mosquitto broker",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "appdaemon": true,
+                    "netdaemon": true,
+                    "sidepanel_icon": "mdi:alpha-c-box",
+                    "sidepanel_title": "HACS",
+                    "token": "16fef02d5cada02de4c05d391f0ded9e638354b1"
+                },
+                "domain": "hacs",
+                "entry_id": "180ee1058b36460a81e8fe9d2a8454ec",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "country": "China"
+                },
+                "domain": "coronavirus",
+                "entry_id": "1457f6be453c40e983af0988dbf99c66",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "China",
+                "unique_id": "China",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "device_config": "ui",
+                    "platform": [
+                        "aligenie"
+                    ],
+                    "setting": {
+                        "app_key": "c5E0lqj5hOCjtnWM",
+                        "app_secret": "K7qvEAWPzrI[v9]J",
+                        "broker": "mqtt.ljr.im",
+                        "entity_key": "",
+                        "port": 28883
+                    },
+                    "skill": {}
+                },
+                "domain": "havcs",
+                "entry_id": "607bb57fd1ec4b21961fd7a692591b77",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "\u4e3b\u914d\u7f6e[Web\u754c\u9762]",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "mode": [
+                        "skill"
+                    ],
+                    "platform": "aligenie"
+                },
+                "domain": "havcs",
+                "entry_id": "d7dc2296ee194b89bb4b81d812ef71ad",
+                "options": {},
+                "source": "platform",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "\u63a5\u5165\u5e73\u53f0[aligenie-\u5929\u732b\u7cbe\u7075]\uff0c\u63a5\u5165\u65b9\u5f0f['skill']",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "cloudhook": false,
+                    "webhook_id": "31726538f294552d99cb823ed91bc8e1e605e89c66c0f34c0f5e1dec69b01260"
+                },
+                "domain": "locative",
+                "entry_id": "399b915356de4975ac0f0e8a31a66986",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Locative Webhook",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "dc2ea6fi76E:APA91bH9sFYmMNS3X9j71GwfCxNvVRo5Ll8_JKMEIKxWuqppjKTms9zVgmBsjvRv2La2GQ83Am4uqDx-jmXpRDCqfuBqZ0UYlIcqVkm1mt4ZngqtIjM_ysuztV4lNZi4Vo_V5eDjpZ0A",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "1.8.0-144 (144)",
+                    "device_id": "a5960da7a439ea60",
+                    "device_name": "BKL-AL00",
+                    "manufacturer": "HUAWEI",
+                    "model": "BKL-AL00",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "8a45aa5517354b08bba5f975cd7bcb41",
+                    "webhook_id": "e9289a4b8439712c35bf92677d731a6b6df03d2cbbbd81a5bc6daaffc027acef"
+                },
+                "domain": "mobile_app",
+                "entry_id": "b5259d4df8c0449782681f02baaac800",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "BKL-AL00",
+                "unique_id": "io.homeassistant.companion.android-a5960da7a439ea60",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

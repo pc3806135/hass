@@ -1,0 +1,4 @@
+sensor:
+  - platform: oilprice
+    name: 最新油价
+    region: hubei

@@ -1,0 +1,98 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "180ee1058b36460a81e8fe9d2a8454ec"
+                ],
+                "connections": [],
+                "id": "5a2c610400a041eabbf64cbce2cd140f",
+                "identifiers": [
+                    [
+                        "hacs",
+                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+                    ]
+                ],
+                "manufacturer": "hacs.xyz",
+                "model": "",
+                "name": "HACS",
+                "name_by_user": null,
+                "sw_version": "0.23.2",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "b5259d4df8c0449782681f02baaac800"
+                ],
+                "connections": [],
+                "id": "c9be7d5ab9a14518964115b81ba5f631",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "a5960da7a439ea60"
+                    ]
+                ],
+                "manufacturer": "HUAWEI",
+                "model": "BKL-AL00",
+                "name": "BKL-AL00",
+                "name_by_user": null,
+                "sw_version": "29",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "d7dc2296ee194b89bb4b81d812ef71ad"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.light"
+                    ]
+                ],
+                "id": "423fd707861841d897773cb4c5cc8e81",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.light"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.light <-> ['light.relay_29a81b_1']",
+                "name": "\u5ba2\u5385\u706f",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "d7dc2296ee194b89bb4b81d812ef71ad"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.wendu"
+                    ]
+                ],
+                "id": "357e43b7468d4901b77a9ea428161652",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.wendu"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.wendu <-> ['sensor.wen_du']",
+                "name": "\u5ba2\u5385\u6e29\u5ea6",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

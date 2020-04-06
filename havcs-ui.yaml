@@ -1,0 +1,30 @@
+havcs.light:
+  actions:
+    turn_off: []
+    turn_on: []
+  attributes: []
+  entity_id:
+  - light.relay_29a81b_1
+  icon: mdi-lightbulb
+  name: 客厅灯
+  type: light
+  visable:
+  - aligenie
+  - dueros
+  - jdwhale
+  zone: 客厅
+havcs.wendu:
+  actions:
+    query_temperature: []
+  attributes:
+  - temperature
+  entity_id:
+  - sensor.wen_du
+  icon: mdi-access-point-network
+  name: 客厅温度
+  type: sensor
+  visable:
+  - aligenie
+  - dueros
+  - jdwhale
+  zone: 客厅

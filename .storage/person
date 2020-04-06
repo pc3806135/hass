@@ -1,0 +1,16 @@
+{
+    "data": {
+        "items": [
+            {
+                "device_trackers": [
+                    "device_tracker.bkl_al00"
+                ],
+                "id": "pc",
+                "name": "pc",
+                "user_id": "8a45aa5517354b08bba5f975cd7bcb41"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 2
+}

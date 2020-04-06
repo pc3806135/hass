@@ -1,0 +1,11 @@
+ #监测home-assistant_v2.db的大小
+sensor:
+#  - platform: filesize
+#    file_paths:
+ #     - /config/home-assistant_v2.db
+- platform: sql
+  db_url: mysql://hass:1991@192.168.0.232:3307/information_schema
+  queries:
+    - name: hass_db_size
+      query: "select concat(round(sum(DATA_LENGTH/1024/1024),0)) as db_size from TABLES where table_schema='homeassistant';"
+      column: 'db_size'

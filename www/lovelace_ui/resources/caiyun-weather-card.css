@@ -1,0 +1,172 @@
+.ha-card{
+  border-radius: 8px
+}
+.card {
+    position: relative;
+    list-style: none;
+    min-height: 30px;
+}
+
+.icon.bigger{
+    width: 110px;
+    height: 110px;
+    margin: -18px -8px 0px 5px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: -6px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.te {
+   left: 100px;
+   top:0;
+   position: absolute;
+}
+
+
+
+.temp {
+	 margin-top:10px;
+   font-size: 30px;
+   font-weight:350;
+}
+
+.nowState{
+   margin-top: 7px;
+}
+
+.pm25{
+  font-size:.8em;
+  padding: 0 5px;
+  margin:-2px 4px;
+  border-radius:5px;
+}
+
+.variations {
+    position:absolute;
+		padding:4px 16px 10px 100px;
+    top:0;
+    right:0;
+    text-align: left;
+}
+
+.aunit{
+	font-weight:200;
+}
+
+.unit {
+    font-size: .8em;
+    font-weight:300;
+}
+
+.info{
+    margin-top:18px;
+}
+
+.info div {
+    height: 4.4px;
+    width: 4.4px;
+    float:right;
+    border-radius:2.2px;
+    margin-right:3px;
+    background:var(--primary-text-color);
+    transform-origin: center;
+    transition:.3s;
+}
+
+.clear {
+    clear: both;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display:var(--info-display,inline-block)
+}
+
+.clear2 {
+    clear: both;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    display:var(--info-display,inline-block)
+}
+
+.xi{
+	font-size:0.9em;
+	color: var(--secondary-text-color);
+	padding:5px 10px 0px 10px;
+}
+
+.xi1{
+	font-size:0.9em;
+	color: var(--secondary-text-color);
+	padding:13px 10px 0px 0px;
+}
+
+.xi0{
+	font-size:0.9em;
+	color: var(--secondary-text-color);
+	padding:1px 10px 0px 0px;
+}
+
+iron-icon {
+    height:16px;
+    width:30px;
+}
+
+.div-a{
+	float:left;width:70%;border:0px
+}
+.div-b{
+	float:left;width:30%;border:0px
+}
+
+.day {
+	margin-top:10px;
+    display: block;
+    width: 25%;
+    float: left;
+    text-align: center;
+    color: var(--primary-text-color);
+    border-right: .1em solid rgb(110,110,110,.2);
+    box-sizing: border-box;
+}
+
+.dayname {
+    text-transform: uppercase;
+}
+
+.highTemp {
+	font-weight:300;
+	opacity:0.8;
+}
+
+.clear .day:first-child {
+    margin-left: 0;
+}
+
+.clear .day:nth-last-child(1) {
+    border-right: none;
+    margin-right: 0;
+}
+
+.sunset{
+  font-size:.8em;
+  padding: 0 5px;
+  margin:-2px 4px;
+  border-radius:0px;
+}
+
+.carwash {
+  font-size:.8em;
+  padding: 0 5px;
+  margin:-2px 4px;
+  border-radius:0px;
+}

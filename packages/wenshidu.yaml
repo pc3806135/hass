@@ -1,0 +1,15 @@
+#温湿度监控
+sensor:
+  - platform: mqtt
+    name: "温度"
+    state_topic: "tele/wenshidu/SENSOR"
+    value_template: "{{ value_json['DHT11'].Temperature }}"
+    unit_of_measurement: "°C"
+    qos: 1
+
+  - platform: mqtt
+    name: "湿度"
+    state_topic: "tele/wenshidu/SENSOR"
+    value_template: "{{ value_json['DHT11'].Humidity }}"
+    unit_of_measurement: "%"
+    qos: 1

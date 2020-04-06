@@ -1,0 +1,96 @@
+#系统监控
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: processor_use
+      - type: load_1m
+      - type: memory_use_percent
+      - type: memory_use
+      - type: memory_free
+      - type: disk_use_percent
+        arg: /home
+      - type: disk_use
+        arg: /home
+      - type: disk_free
+        arg: /home
+      - type: ipv4_address
+        arg: eth0
+      - type: network_in
+        arg: eth0 
+      - type: network_out
+        arg: eth0 
+     # - type: packets_in
+     #   arg: wlan0
+     # - type: packets_out
+     #   arg: wlan0
+     # - type: process
+     #   arg: homebridge
+     # - type: swap_free
+      - type: last_boot
+     #   arg: octave-cli  
+#HomeAssistant运行时间
+  - platform: uptime
+    unit_of_measurement: hours
+#检测CPU温度################
+  - platform: command_line
+    name: CPU Temperature
+   # command: "cat /sys/class/thermal/thermal_zone0/temp"
+    command: "cat /sys/class/hwmon/hwmon0/temp1_input"
+    #N1  openwrt中的温度检测
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(2)}}'
+    #value_template: '{{ value | round(2) }}'
+    scan_interval: 30
+#########################################
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+    name: latest_homeassistant
+
+
+homeassistant:
+  customize:
+    sensor.cpu_temperature:
+      friendly_name: 'CPU温度'
+      homebridge_hidden: true
+    sensor.load_1m:
+      friendly_name: 'CPU负载'
+      homebridge_hidden: true
+    sensor.processor_use:
+      friendly_name: 'CPU使用率'
+      homebridge_hidden: true
+    sensor.memory_use_percent:
+      friendly_name: 'RAM使用率'
+      homebridge_hidden: true
+    sensor.disk_use_percent_home:
+      friendly_name: '磁盘使用率'
+      homebridge_hidden: true
+    sensor.memory_use:
+      friendly_name: 'RAM已用'
+      homebridge_hidden: true
+    sensor.memory_free:
+      friendly_name: 'RAM剩余'
+      homebridge_hidden: true
+    sensor.disk_use_home:
+      friendly_name: '磁盘已用'
+      homebridge_hidden: true
+    sensor.disk_free_home:
+      friendly_name: '磁盘剩余'
+      homebridge_hidden: true
+    sensor.network_out_eth0:
+      friendly_name: '发送字节'
+      homebridge_hidden: true
+    sensor.network_in_eth0:
+      friendly_name: '接收字节'
+      homebridge_hidden: true
+    sensor.ipv4_address_eth0:
+      friendly_name: '系统IP地址'
+      homebridge_hidden: true
+    sensor.last_boot:
+      friendly_name: '开机时间'
+      homebridge_hidden: true
+    sensor.uptime:
+      friendly_name: '系统运行'
+      homebridge_hidden: true
+    sensor.latest_homeassistant:
+      friendly_name: '最新版本'
+      homebridge_hidden: true

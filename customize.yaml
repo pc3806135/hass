@@ -1,0 +1,48 @@
+switch.wemo_switch_1:
+  friendly_name: Toaster
+  entity_picture: /local/toaster.jpg
+zone.home: {}
+switch.switch:
+  friendly_name: 开关
+camera.shou_ji_she_xiang_tou: {}
+sensor.c_users_pc_appdata_roaming_homeassistant_home_assistant_v2_db:
+  icon: mdi:file
+device_tracker.rkkdu17c03015248:
+  friendly_name: 男主人
+light.1:
+  friendly_name: 客厅灯
+light.2:
+  friendly_name: 厨房灯
+binary_sensor.button_1:
+  friendly_name: 客厅灯
+binary_sensor.button_2: {}
+sensor.cpu_temperature:
+  friendly_name: CPU温度
+sensor.disk_free_home:
+  friendly_name: 磁盘剩余
+sensor.disk_use_percent_home:
+  friendly_name: 磁盘使用率
+sensor.disk_use_home:
+  friendly_name: 磁盘已用
+sensor.ipv4_address_br_lan:
+  friendly_name: 系统IP地址
+sensor.last_boot:
+  friendly_name: 开机时间
+sensor.load_1m:
+  friendly_name: CPU负载
+sensor.memory_free:
+  friendly_name: RAM剩余
+sensor.memory_use:
+  friendly_name: RAM已用
+sensor.memory_use_percent:
+  friendly_name: RAM使用率
+sensor.uptime:
+  friendly_name: 系统运行时间
+sensor.network_in_br_lan:
+  friendly_name: 接收字节
+sensor.network_out_br_lan:
+  friendly_name: 发送字节
+sensor.processor_use:
+  friendly_name: CPU使用率
+sensor.latest_homeassistant:
+  friendly_name: HA最新版本

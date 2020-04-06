@@ -1,0 +1,122 @@
+{
+    "data": [
+        {
+            "last_seen": "2020-04-06T14:36:49.912257+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "friendly_name": "pc",
+                    "id": "pc",
+                    "source": "person.pc",
+                    "user_id": "8a45aa5517354b08bba5f975cd7bcb41"
+                },
+                "context": {
+                    "id": "b3c9183360dc4a2e853f47754a5bc4a0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.pc",
+                "last_changed": "2020-04-06T14:36:21.070585+00:00",
+                "last_updated": "2020-04-06T14:36:21.070585+00:00",
+                "state": "unknown"
+            }
+        },
+        {
+            "last_seen": "2020-04-06T14:36:49.912257+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "relay_29a81b_1",
+                    "supported_features": 0
+                },
+                "context": {
+                    "id": "0688b6d560204a9682d6b52182884275",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "light.relay_29a81b_1",
+                "last_changed": "2020-04-06T14:36:21.635252+00:00",
+                "last_updated": "2020-04-06T14:36:21.635252+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-06T14:36:49.912257+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "relay_29a81b_2",
+                    "supported_features": 0
+                },
+                "context": {
+                    "id": "ac2c0a9b599c43b1aa6385a2b082ad06",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "light.relay_29a81b_2",
+                "last_changed": "2020-04-06T14:36:21.636628+00:00",
+                "last_updated": "2020-04-06T14:36:21.636628+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-06T14:36:49.912257+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "relay_29a81b_3",
+                    "supported_features": 0
+                },
+                "context": {
+                    "id": "cc78eec510ac448a96d0487e7c850881",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "light.relay_29a81b_3",
+                "last_changed": "2020-04-06T14:36:21.637877+00:00",
+                "last_updated": "2020-04-06T14:36:21.637877+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-06T14:36:49.912257+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "BKL-AL00",
+                    "source_type": "gps"
+                },
+                "context": {
+                    "id": "ee85bf520d304a6fa25b8007e8e1ed67",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.bkl_al00",
+                "last_changed": "2020-04-06T14:36:24.458710+00:00",
+                "last_updated": "2020-04-06T14:36:24.458710+00:00",
+                "state": "unknown"
+            }
+        },
+        {
+            "last_seen": "2020-04-06T11:48:30.773063+00:00",
+            "state": {
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "package_folder_old_size",
+                    "initial": 0.0,
+                    "max": 30000000.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "278bbba6f41e45dbbdebd26617db16bd",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.package_folder_old_size",
+                "last_changed": "2020-04-06T08:28:44.139396+00:00",
+                "last_updated": "2020-04-06T08:28:44.139396+00:00",
+                "state": "0.0"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

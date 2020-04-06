@@ -1,0 +1,525 @@
+{
+    "data": {
+        "config": {
+            "background": "center / cover no-repeat url(\"/local/images/1.jpeg\") fixed",
+            "custom-header": {
+                "background": "rgba(155, 155, 155, 0.25)",
+                "compact_mode": true,
+                "swipe_animate": "fade",
+                "swipe_prevent_default": true
+            },
+            "custom_header": {
+                "compact_mode": true,
+                "footer_mode": true
+            },
+            "title": "\u5bb6",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "person.pc"
+                        },
+                        {
+                            "entity": "person.yy"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.wo_de_jia",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.gong_li"
+                                },
+                                {
+                                    "entity": "sensor.nong_li"
+                                },
+                                {
+                                    "entity": "sensor.nian_hao"
+                                },
+                                {
+                                    "entity": "sensor.run_nian"
+                                },
+                                {
+                                    "entity": "sensor.xing_qi"
+                                },
+                                {
+                                    "entity": "sensor.xing_zuo"
+                                },
+                                {
+                                    "entity": "sensor.jie_qi"
+                                },
+                                {
+                                    "entity": "sensor.sheng_xiao"
+                                },
+                                {
+                                    "entity": "sensor.yi"
+                                },
+                                {
+                                    "entity": "sensor.ji"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.china_coronavirus_confirmed",
+                                "sensor.china_coronavirus_current",
+                                "sensor.china_coronavirus_recovered",
+                                "sensor.china_coronavirus_deaths"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u65b0\u51a0\u80ba\u708e\u6570\u636e",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.shi_du",
+                                    "graph": "line",
+                                    "icon": "mdi:water",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.wen_du",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.load_1m",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temperature",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.pve_openwrt_running"
+                                },
+                                {
+                                    "entity": "binary_sensor.pve_dsm_running"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "PVE\u670d\u52a1\u5668\u72b6\u6001",
+                            "type": "entities"
+                        },
+                        {
+                            "content": "<ha-icon icon=\"mdi:update\"></ha-icon> {{ state_attr('sensor.zui_xin_you_jie', 'update_time')}} \n##  <center>92#<ha-icon icon=\"mdi:gas-station\"></ha-icon>  <font color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}} </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#<ha-icon icon=\"mdi:gas-station\"></ha-icon>  <font color=#fbbc05>  {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p>98#<ha-icon icon=\"mdi:gas-station\"></ha-icon> <font color=#4285f4>  {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#  <ha-icon icon=\"mdi:gas-station\"></ha-icon> <font color=#34a853>  {{ state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> \n- {{ states('sensor.zui_xin_you_jie') }} \n- {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}",
+                            "type": "markdown"
+                        },
+                        {
+                            "entities": [
+                                "device_tracker.bkl_al00",
+                                "sensor.bkl_al00_battery_level",
+                                "sensor.bkl_al00_wifi_connection"
+                            ],
+                            "type": "glance"
+                        }
+                    ],
+                    "panel": false,
+                    "path": "default_view",
+                    "title": "\u8d44\u8baf\u4fe1\u606f"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "artwork": "cover",
+                            "entity": "media_player.mpd",
+                            "hide": {
+                                "power_state": false,
+                                "source": true,
+                                "volume": true
+                            },
+                            "icon": "mdi:music-note",
+                            "type": "custom:mini-media-player"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.relay_29a81b_1",
+                                    "show_icon": false,
+                                    "show_state": true,
+                                    "type": "custom:button-card"
+                                },
+                                {
+                                    "entity": "light.relay_29a81b_2",
+                                    "show_icon": false,
+                                    "show_state": true,
+                                    "type": "custom:button-card"
+                                },
+                                {
+                                    "entity": "light.relay_29a81b_3",
+                                    "show_icon": false,
+                                    "show_state": true,
+                                    "type": "custom:button-card"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.deng_2",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "light.deng_2",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "light.deng_2",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "light.deng_2",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "background": "#B0C2ED",
+                            "entities": [
+                                {
+                                    "entity": "sensor.relay_29a81b_1",
+                                    "name": "\u706f"
+                                },
+                                {
+                                    "entity": "sensor.wen_du",
+                                    "name": "\u6e29\u5ea6"
+                                },
+                                {
+                                    "entity": "sensor.shi_du",
+                                    "name": "\u6e7f\u5ea6"
+                                }
+                            ],
+                            "heading": "\ud83d\udec1 \u536b\u751f\u95f4",
+                            "link": "/lovelace/bathroom",
+                            "type": "custom:banner-card"
+                        },
+                        {
+                            "entities": [
+                                "light.relay_29a81b_1",
+                                "light.relay_29a81b_2",
+                                "light.relay_29a81b_3"
+                            ],
+                            "title": "My Title",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "",
+                    "title": "\u706f\u5149\u63a7\u5236"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.cpu_temperature"
+                                },
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.load_1m"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.memory_free"
+                                },
+                                {
+                                    "entity": "sensor.memory_use"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent_home"
+                                },
+                                {
+                                    "entity": "sensor.disk_free_home"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_home"
+                                },
+                                {
+                                    "entity": "sensor.ipv4_address_eth0"
+                                },
+                                {
+                                    "entity": "sensor.last_boot"
+                                },
+                                {
+                                    "entity": "sensor.uptime"
+                                },
+                                {
+                                    "entity": "sensor.latest_homeassistant"
+                                },
+                                {
+                                    "entity": "sensor.hass_db_size"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.disk_use_percent_home",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "\u78c1\u76d8\u4f7f\u7528\u7387",
+                                    "theme": "default",
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.processor_use",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "CPU\u4f7f\u7528\u7387",
+                                    "theme": "default",
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "aspect_ratio": "1.5/1",
+                            "custom_fields": {
+                                "cpu": "[[[\n  return `<ha-icon\n    icon=\"mdi:server\"\n    style=\"width: 12px; height: 12px; color: deepskyblue;\">\n    </ha-icon><span>CPU: <span style=\"color: var(--text-color-sensor);\">${states['sensor.processor_use'].state}%</span></span>`\n]]]\n",
+                                "db": "[[[\n  return `<ha-icon\n    icon=\"mdi:file\"\n    style=\"width: 12px; height: 12px; color: deepskyblue;\">\n    </ha-icon><span>DB: <span style=\"color: var(--text-color-sensor);\">${states['sensor.hass_db_size'].state}MB</span></span>`\n]]] \n",
+                                "ram": "[[[\n  return `<ha-icon\n    icon=\"mdi:memory\"\n    style=\"width: 12px; height: 12px; color: deepskyblue;\">\n    </ha-icon><span>RAM: <span style=\"color: var(--text-color-sensor);\">${states['sensor.memory_use_percent'].state}%</span></span>`\n]]]\n",
+                                "sd": "[[[\n  return `<ha-icon\n    icon=\"mdi:harddisk\"\n    style=\"width: 12px; height: 12px; color: deepskyblue;\">\n    </ha-icon><span>DISK: <span style=\"color: var(--text-color-sensor);\">${states['sensor.disk_use_percent_home'].state}%</span></span>`\n]]]\n",
+                                "temp": "[[[\n  return `<ha-icon\n    icon=\"mdi:thermometer\"\n    style=\"width: 12px; height: 12px; color: yellow;\">\n    </ha-icon><span>${entity.state}\u00b0C</span>`\n]]]\n"
+                            },
+                            "entity": "sensor.cpu_temperature",
+                            "icon": "mdi:home-assistant",
+                            "name": "Hassio",
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "#000111"
+                                    },
+                                    {
+                                        "border-radius": "7%"
+                                    },
+                                    {
+                                        "padding": "10%"
+                                    },
+                                    {
+                                        "color": "ivory"
+                                    },
+                                    {
+                                        "font-size": "15px"
+                                    },
+                                    {
+                                        "text-shadow": "0px 0px 5px black"
+                                    },
+                                    {
+                                        "text-transform": "capitalize"
+                                    }
+                                ],
+                                "custom_fields": {
+                                    "cpu": [
+                                        {
+                                            "padding-bottom": "2px"
+                                        },
+                                        {
+                                            "align-self": "middle"
+                                        },
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "--text-color-sensor": "[[[ if (states[\"sensor.processor_use\"].state > 80) return \"red\"; ]]]"
+                                        }
+                                    ],
+                                    "db": [
+                                        {
+                                            "padding-bottom": "2px"
+                                        },
+                                        {
+                                            "align-self": "middle"
+                                        },
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "--text-color-sensor": "[[[ if (states[\"sensor.hass_db_size\"].state > 500) return \"red\"; ]]]       "
+                                        }
+                                    ],
+                                    "ram": [
+                                        {
+                                            "padding-bottom": "2px"
+                                        },
+                                        {
+                                            "align-self": "middle"
+                                        },
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "--text-color-sensor": "[[[ if (states[\"sensor.memory_use_percent\"].state > 80) return \"red\"; ]]]"
+                                        }
+                                    ],
+                                    "sd": [
+                                        {
+                                            "padding-bottom": "2px"
+                                        },
+                                        {
+                                            "align-self": "middle"
+                                        },
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "--text-color-sensor": "[[[ if (states[\"sensor.disk_use_percent_home\"].state > 80) return \"red\"; ]]]"
+                                        }
+                                    ],
+                                    "temp": [
+                                        {
+                                            "align-self": "start"
+                                        },
+                                        {
+                                            "justify-self": "end"
+                                        }
+                                    ]
+                                },
+                                "grid": [
+                                    {
+                                        "grid-template-areas": "\"i temp\" \"n n\" \"cpu cpu\" \"ram ram\" \"sd sd\" \"db db\" \"connect connect\""
+                                    },
+                                    {
+                                        "grid-template-columns": "1fr 1fr"
+                                    },
+                                    {
+                                        "grid-template-rows": "1fr min-content min-content min-content min-content min-content min-content"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "[[[\n  if (entity.state < 60) return 'lime';\n  if (entity.state >= 60 && entity.state < 80) return 'orange';\n  else return 'red';\n]]]\n"
+                                    },
+                                    {
+                                        "width": "30%"
+                                    },
+                                    {
+                                        "margin-top": "-5%"
+                                    }
+                                ],
+                                "img_cell": [
+                                    {
+                                        "justify-content": "start"
+                                    },
+                                    {
+                                        "align-items": "start"
+                                    },
+                                    {
+                                        "margin": "none"
+                                    }
+                                ],
+                                "name": [
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "font-size": "25px"
+                                    },
+                                    {
+                                        "color": "white"
+                                    },
+                                    {
+                                        "align-self": "middle"
+                                    },
+                                    {
+                                        "justify-self": "start"
+                                    },
+                                    {
+                                        "padding-bottom": "30px"
+                                    }
+                                ]
+                            },
+                            "type": "custom:button-card"
+                        }
+                    ],
+                    "path": "",
+                    "title": "\u7cfb\u7edf\u72b6\u6001"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.transmission_active_torrents",
+                                "sensor.transmission_completed_torrents",
+                                "sensor.transmission_down_speed",
+                                "sensor.transmission_paused_torrents",
+                                "sensor.transmission_started_torrents",
+                                "sensor.transmission_status",
+                                "switch.transmission_switch",
+                                "sensor.transmission_total_torrents",
+                                "switch.transmission_turtle_mode",
+                                "sensor.transmission_up_speed"
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "",
+                    "title": "\u5176\u4ed6"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

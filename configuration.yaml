@@ -1,0 +1,166 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+recorder:
+  #使用MySQL数据库来替换SQLite数据库
+  db_url: mysql://hass:1991@192.168.0.232:3307/homeassistant?charset=utf8
+# 保留5天的历史记录 
+  purge_keep_days: 5
+# 每两天清除一次数据库“事件表”和“状态表”的清理动作 
+  purge_interval: 1
+##########################################################################
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+homeassistant:
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+ # whitelist_external_dirs:
+  #  - /config
+#################侧边栏管理##########################
+ha_sidebar:
+  sidebar_title: 侧边栏管理
+  sidebar_icon: mdi:xbox-controller-menu
+  tabs_name: 二级菜单
+  tabs_icon: mdi:format-list-numbered
+
+##############################侧边栏###############################
+panel_iframe:
+#添加HA侧边面板
+  designicons:
+    title: 'Design Icons'
+    icon: mdi:vector-square
+    url: 'https://cdn.materialdesignicons.com/2.0.46/' 
+########################百度地图###############################
+# 使用内置密钥（有限额，最好自己申请密钥）
+#ha_baidu_map:
+
+# 完整配置
+# record: 要记录使用GPSLogger的设备（在使用GPSLogger定位时配置使用）
+# map: hidden（侧边栏隐藏自带的地图）
+ha_baidu_map:
+  name: 百度地图
+  icon: mdi:map-marker-radius
+  ak: CFcbf0428a5c6c30a22b8e9df1f5f6c1 #百度地图AK密钥
+  map: hidden
+  record:
+    - device_tracker.unknown
+ ###########################配置HACS################################
+#hacs:
+#  token: 16fef02d5cada02de4c05d391f0ded9e638354b1
+
+##################接入手机APP#####################
+mobile_app:
+##################主题######################
+frontend:
+  themes: !include_dir_merge_named themes
+##################接入微信###################
+molohub:
+##################接入天猫工具molobot#########
+molobot:
+  phone: 13397151799  
+  # 天猫精灵绑定的手机号
+  password: yizhiduxiu    
+  # 绑定密码
+#############################################
+# 自动发现
+discovery:
+#开启MQTT
+###################更新信息###################################
+#updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+ # include_used_components: true
+################################################################
+# Example configuration.yaml entry
+#######################百度语音TTS##############################
+tts:
+  - platform: baidu
+    #app_id，api_key，secret_key从百度云上注册得到
+    app_id: 16434444 
+    api_key: FhtYISuPG2qBWBWw3h39UcQO
+    secret_key: fOperz9kpGtvHMbBM8w5LS4ryYHu9AI2
+    #speed：语速0-9（缺省5）
+    #pitch：语调0-9（缺省5）
+    #volume：音量0-15（缺省5）
+    #person：声音（0：女，1：男，3：百度合成，4：百度合成，缺省0）
+    speed: 5
+    pitch: 5
+    volume: 15
+    person: 0
+ ################################################################## 
+
+ ###################################################################
+#sensor:
+ # - platform: hotmovies
+#    name: 热映电影
+#########################路由器追踪#################################
+#device_tracker:
+  #- platform: gpslogger    
+#device_tracker:
+#  - platform: ping
+#    hosts:
+#      Phone1: 192.168.0.4
+ #     Phoen2: 192.168.0.6
+ #   interval_seconds: 30
+ #   consider_home: 180
+# Example configuration.yaml entry
+#device_tracker:
+#  - platform: luci
+#    host: 192.168.0.123
+#    username: root
+#    password: yizhiduxiu
+########################播放器######################################
+media_player:
+  - platform: mpd
+    host: 192.168.0.226
+    port: 6600
+########################
+ # - platform: ha_cloud_music
+  #  api_url: 'http://192.168.0.123:3000'
+  #  sidebar_title: 云音乐
+  #  sidebar_icon: mdi:music
+  #  show_mode: fullscreen
+  #  uid: 3241584887
+  #  user: 13397151799
+  #  passwowrd: yizhiduxiu
+  #  tts_before_message: '主人：'
+  #  tts_after_message: '。我是爱你的小喵'
+   # tts_mode: 4
+   # is_voice: true
+  #  is_notify: true
+   # is_debug: true
+##########################havcs###############################                 
+havcs:
+  platform:                               # 音箱平台服务网关，至少启用一个
+    - aligenie                            # 天猫精灵
+ #   - dueros                              # 小度
+#    - jdwhale                             # 叮咚
+  skill:
+    bind_device: True                     # 是否启动时更新设备绑定信息。不设置默认True（叮咚音箱才有效）>>*新版本加入<<
+    sync_device: False                    # 是否主动上报设备状态。不设置默认False（小度音箱才有效）
+  # mqtt相关设置，启用http代理服务及APP技能服务才生效
+  setting:
+    app_key: c5E0lqj5hOCjtnWM                 # 注册账号获取的AppKey
+    app_secret: K7qvEAWPzrI[v9]J          # 注册账号获取的AppSecret
+   # entity_key: K7qvEAWPzrI[v9]J           # 加密entity_id的key，自定义16个字符。不设置则不加密
+  device_config: ui                       # 设备管理模式，text为原来文本编辑，ui为启用web管理页面。不设置默认text >>*新版本调整<<
+
+  ###################################################################
+proxmoxve:
+  - host: 192.168.0.200
+    port: 8006
+    verify_ssl: false
+    username: root
+    password: yizhiduxiu1991
+    nodes:
+      - node: pve
+        vms:
+          - 100
+          - 101

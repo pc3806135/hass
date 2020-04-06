@@ -1,0 +1,8 @@
+#信息推送
+notify:
+  - platform: Qiyeweichat
+    name: weixin_quanjia       #用于生成服务实体ID  比如这个出来就是notify.weixin_quanjia
+    corpid: ww86a076c80878cdb4       #这个是企业微信的企业id
+    agentId: 1000002    #这个是企业微信里面新建应用的应用id
+    secret: ubKzLLE_ZblIe3yB4sYnNTHWCisOw5b_TV89EfCCN08       #这个是企业微信里面新建应用的应用secret
+    touser: '@all'    #这里是发送个企业应用里面的全部人  当然  也可以设置指定的人的id  具体再企业微信里面设置

@@ -1,0 +1,28 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "5af8aad1b8bd42a684901454c97bf7ca",
+                "type": "module",
+                "url": "/hacsfiles/button-card/button-card.js"
+            },
+            {
+                "id": "ba939c1911f64e7c809ce7f9caa6aeb5",
+                "type": "module",
+                "url": "/hacsfiles/custom-header/custom-header.js"
+            },
+            {
+                "id": "1b510b568cf0456484ea209579fde0d9",
+                "type": "module",
+                "url": "/hacsfiles/banner-card/banner-card.js"
+            },
+            {
+                "id": "d4650c1a12ef419fb5d8957eb4b82189",
+                "type": "module",
+                "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js"
+            }
+        ]
+    },
+    "key": "lovelace_resources",
+    "version": 1
+}
